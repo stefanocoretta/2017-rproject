@@ -4,10 +4,12 @@
     <title>A workflow for doing research in R with RStudio</title>
     <meta charset="utf-8" />
     <meta name="author" content="Stefano Coretta" />
-    <meta name="date" content="2021-04-11" />
+    <meta name="date" content="2021-06-27" />
     <script src="libs/header-attrs/header-attrs.js"></script>
-    <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -15,16 +17,18 @@ class: center, middle, inverse, title-slide
 
 # A workflow for doing research in R with RStudio
 ### Stefano Coretta
-### 2021-04-11
+### 2021-06-27
 
 ---
 
 
 
 
+
+
 # RStudio
 
-.center[![:scale 100%](img/rstudio.png)]
+.center[![:scale 85%](img/rstudio.png)]
 
 ---
 
@@ -38,42 +42,50 @@ class: center, middle, inverse, title-slide
 
 RStudio **projects** are self-contained environments in which you keep code and data.
 
-.center[![:scale 80%](img/new-project.png)]
+.center[![:scale 70%](img/new-project.png)]
 
 ---
 
 # RStudio projects
 
-Pros:
+.pull-left[
+Advantages
 
-* you can open and work on **multiple projects** at a time
 
-* the files of each inividual projects are easily accessible by using **relative paths**, so goodby to `setwd()` (for example `./data/results.csv` if your project has a file `results.csv` in the `data/` folder.)
+- You can open and work on **multiple projects** at a time.
 
-* you can **isolate** package **dependencies** with `renv`
+- The files of each individual projects are easily accessible by using **relative paths**, so goodby to `setwd()` (for example `./data/results.csv` if your project has a file `results.csv` in the `data/` folder).
 
-* it simplifies the **distribution** of your research (for example, as an R package)
+- You can **isolate** package **dependencies** with `renv`.
 
-Cons:
+- It simplifies the **distribution** of your research (for example, as an R package).
+]
 
-* **none**!
+--
+
+.pull-right[
+Disadvantages
+
+- **None**!
+]
 
 ---
 
-# Organising files
+# Organising folders and files
 
+From the [Open Science Framework](http://help.osf.io/m/bestpractices/l/611391-organizing-files).
 
-From the Open Science Framework website (&lt;http://help.osf.io/m/bestpractices/l/611391-organizing-files&gt;)
+* Separate DATA and CODE.
 
-* separate DATA and CODE
+* Separate RAW data and DERIVED data.
 
-* separate RAW data and DERIVED data
+* Treat raw data as READ-ONLY.
 
-* treat raw data as READ-ONLY
+* Use a versioning system (like `git` with GitHub).
 
-* use a versioning system (like `git` with GitHub)
+---
 
-R packages and **research compendia**:
+# Research compendia with R packages
 
 * &lt;https://github.com/ropensci/rrrpkg&gt;
 
@@ -89,29 +101,29 @@ R packages and **research compendia**:
 
 * &lt;http://rmarkdown.rstudio.com&gt;
 
-* text and code in a single document (`.Rmd`)
+* Text and code in a single document (`.Rmd`).
 
-* several output formats (`.html`, `.pdf`, `.docx`, ...)
+* Several output formats (`.html`, `.pdf`, `.docx`, ...).
 
-* R Markdown templates for journal submissions (includes Elsevier): &lt;https://github.com/rstudio/rticles&gt;
+* R Markdown templates for journal submissions: &lt;https://github.com/rstudio/rticles&gt;.
 
 ---
 
 # R Markdown
 
-.center[![:scale 100%](img/rmarkdown.png)]
+.center[![:scale 85%](img/rmarkdown.png)]
 
 ---
 
 # Summary
 
-* use **RStudio**
+* Use **RStudio**.
 
-* **don't save `.Rdata`** and do not load it at start up
+* **Don't save `.Rdata`** and do not load it at start up.
 
-* separate **code** and **data** (*raw* and *derived*)
+* Separate **code** and **data** (*raw* and *derived*).
 
-* use **dynamic reports** with R Markdown (avoid copy-paste)
+* Use **dynamic reports** with R Markdown (avoid copy-paste).
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
