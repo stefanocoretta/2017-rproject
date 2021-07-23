@@ -1,5 +1,5 @@
 ---
-title: "A workflow for doing research in R with RStudio"
+title: "Research with R and RStudio: A workflow"
 author: "Stefano Coretta"
 date: "`r Sys.Date()`"
 output:
